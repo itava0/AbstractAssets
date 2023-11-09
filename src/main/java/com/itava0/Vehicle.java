@@ -52,7 +52,7 @@ public class Vehicle extends Asset{
 
         // Check if the car has over 100,000 miles and doesn't contain "Honda" or "Toyota" in the makeModel
         boolean isHighMileage = this.odometer > 100000;
-        boolean isExcludedMakeModel = !makeModel.toLowerCase().contains("honda") &&
+        boolean isExcludedMakeModel = !makeModel.toLowerCase().contains("honda") ||
                 !makeModel.toLowerCase().contains("toyota");
 
         if (isHighMileage && isExcludedMakeModel) {
